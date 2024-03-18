@@ -114,6 +114,7 @@ namespace NEW_Programming
             this.TXCM.Name = "TXCM";
             this.TXCM.Size = new System.Drawing.Size(100, 36);
             this.TXCM.TabIndex = 6;
+            this.TXCM.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TXCM_KeyUp);
             // 
             // TXM
             // 
@@ -122,6 +123,7 @@ namespace NEW_Programming
             this.TXM.Name = "TXM";
             this.TXM.Size = new System.Drawing.Size(100, 36);
             this.TXM.TabIndex = 7;
+            this.TXM.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TXM_KeyUp);
             // 
             // TXKM
             // 
@@ -130,6 +132,7 @@ namespace NEW_Programming
             this.TXKM.Name = "TXKM";
             this.TXKM.Size = new System.Drawing.Size(100, 36);
             this.TXKM.TabIndex = 8;
+            this.TXKM.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TXKM_KeyUp);
             // 
             // TXECM
             // 
@@ -172,9 +175,8 @@ namespace NEW_Programming
             this.changebutton.Name = "changebutton";
             this.changebutton.Size = new System.Drawing.Size(100, 46);
             this.changebutton.TabIndex = 13;
-            this.changebutton.Text = "轉換單位";
+            this.changebutton.Text = "清除數據";
             this.changebutton.UseVisualStyleBackColor = true;
-            this.changebutton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.changebutton_KeyUp);
             // 
             // Form1
             // 
