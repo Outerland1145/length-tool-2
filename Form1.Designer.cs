@@ -37,14 +37,14 @@ namespace NEW_Programming
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TXCM = new System.Windows.Forms.TextBox();
+            this.TXM = new System.Windows.Forms.TextBox();
+            this.TXKM = new System.Windows.Forms.TextBox();
+            this.TXECM = new System.Windows.Forms.TextBox();
+            this.TXEM = new System.Windows.Forms.TextBox();
+            this.TXEKM = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.changebutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -107,87 +107,88 @@ namespace NEW_Programming
             this.label6.TabIndex = 5;
             this.label6.Text = "英里";
             // 
-            // textBox1
+            // TXCM
             // 
-            this.textBox1.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox1.Location = new System.Drawing.Point(62, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 36);
-            this.textBox1.TabIndex = 6;
+            this.TXCM.Font = new System.Drawing.Font("新細明體", 18F);
+            this.TXCM.Location = new System.Drawing.Point(62, 124);
+            this.TXCM.Name = "TXCM";
+            this.TXCM.Size = new System.Drawing.Size(100, 36);
+            this.TXCM.TabIndex = 6;
             // 
-            // textBox2
+            // TXM
             // 
-            this.textBox2.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox2.Location = new System.Drawing.Point(332, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 36);
-            this.textBox2.TabIndex = 7;
+            this.TXM.Font = new System.Drawing.Font("新細明體", 18F);
+            this.TXM.Location = new System.Drawing.Point(332, 124);
+            this.TXM.Name = "TXM";
+            this.TXM.Size = new System.Drawing.Size(100, 36);
+            this.TXM.TabIndex = 7;
             // 
-            // textBox3
+            // TXKM
             // 
-            this.textBox3.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox3.Location = new System.Drawing.Point(603, 124);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 36);
-            this.textBox3.TabIndex = 8;
+            this.TXKM.Font = new System.Drawing.Font("新細明體", 18F);
+            this.TXKM.Location = new System.Drawing.Point(603, 124);
+            this.TXKM.Name = "TXKM";
+            this.TXKM.Size = new System.Drawing.Size(100, 36);
+            this.TXKM.TabIndex = 8;
             // 
-            // textBox4
+            // TXECM
             // 
-            this.textBox4.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox4.Location = new System.Drawing.Point(62, 244);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 36);
-            this.textBox4.TabIndex = 9;
+            this.TXECM.Font = new System.Drawing.Font("新細明體", 18F);
+            this.TXECM.Location = new System.Drawing.Point(62, 244);
+            this.TXECM.Name = "TXECM";
+            this.TXECM.Size = new System.Drawing.Size(100, 36);
+            this.TXECM.TabIndex = 9;
             // 
-            // textBox5
+            // TXEM
             // 
-            this.textBox5.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox5.Location = new System.Drawing.Point(332, 244);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 36);
-            this.textBox5.TabIndex = 10;
+            this.TXEM.Font = new System.Drawing.Font("新細明體", 18F);
+            this.TXEM.Location = new System.Drawing.Point(332, 244);
+            this.TXEM.Name = "TXEM";
+            this.TXEM.Size = new System.Drawing.Size(100, 36);
+            this.TXEM.TabIndex = 10;
             // 
-            // textBox6
+            // TXEKM
             // 
-            this.textBox6.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox6.Location = new System.Drawing.Point(603, 244);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 36);
-            this.textBox6.TabIndex = 11;
+            this.TXEKM.Font = new System.Drawing.Font("新細明體", 18F);
+            this.TXEKM.Location = new System.Drawing.Point(603, 244);
+            this.TXEKM.Name = "TXEKM";
+            this.TXEKM.Size = new System.Drawing.Size(100, 36);
+            this.TXEKM.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("新細明體", 24F);
-            this.label7.Location = new System.Drawing.Point(56, 9);
+            this.label7.Font = new System.Drawing.Font("新細明體", 36F);
+            this.label7.Location = new System.Drawing.Point(226, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(207, 32);
+            this.label7.Size = new System.Drawing.Size(308, 48);
             this.label7.TabIndex = 12;
             this.label7.Text = "單位轉換工具";
             // 
-            // button1
+            // changebutton
             // 
-            this.button1.Font = new System.Drawing.Font("新細明體", 15F);
-            this.button1.Location = new System.Drawing.Point(332, 312);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 46);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "轉換單位";
-            this.button1.UseVisualStyleBackColor = true;
+            this.changebutton.Font = new System.Drawing.Font("新細明體", 15F);
+            this.changebutton.Location = new System.Drawing.Point(332, 312);
+            this.changebutton.Name = "changebutton";
+            this.changebutton.Size = new System.Drawing.Size(100, 46);
+            this.changebutton.TabIndex = 13;
+            this.changebutton.Text = "轉換單位";
+            this.changebutton.UseVisualStyleBackColor = true;
+            this.changebutton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.changebutton_KeyUp);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.changebutton);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TXEKM);
+            this.Controls.Add(this.TXEM);
+            this.Controls.Add(this.TXECM);
+            this.Controls.Add(this.TXKM);
+            this.Controls.Add(this.TXM);
+            this.Controls.Add(this.TXCM);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -210,14 +211,14 @@ namespace NEW_Programming
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TXCM;
+        private System.Windows.Forms.TextBox TXM;
+        private System.Windows.Forms.TextBox TXKM;
+        private System.Windows.Forms.TextBox TXECM;
+        private System.Windows.Forms.TextBox TXEM;
+        private System.Windows.Forms.TextBox TXEKM;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button changebutton;
     }
 }
 

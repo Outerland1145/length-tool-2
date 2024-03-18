@@ -16,8 +16,7 @@ namespace NEW_Programming
         {
             InitializeComponent();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void changebutton_KeyUp(object sender, KeyEventArgs e)
         {
 
         }
