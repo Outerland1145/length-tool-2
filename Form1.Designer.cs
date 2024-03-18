@@ -44,6 +44,7 @@ namespace NEW_Programming
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -164,11 +165,22 @@ namespace NEW_Programming
             this.label7.TabIndex = 12;
             this.label7.Text = "單位轉換工具";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("新細明體", 15F);
+            this.button1.Location = new System.Drawing.Point(332, 312);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 46);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "轉換單位";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -205,6 +217,7 @@ namespace NEW_Programming
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }
 
