@@ -85,7 +85,7 @@ namespace NEW_Programming
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 48);
             this.label4.TabIndex = 3;
-            this.label4.Text = "英分";
+            this.label4.Text = "英吋";
             // 
             // label5
             // 
@@ -101,11 +101,11 @@ namespace NEW_Programming
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("新細明體", 36F);
-            this.label6.Location = new System.Drawing.Point(595, 193);
+            this.label6.Location = new System.Drawing.Point(619, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 48);
+            this.label6.Size = new System.Drawing.Size(68, 48);
             this.label6.TabIndex = 5;
-            this.label6.Text = "英里";
+            this.label6.Text = "碼";
             // 
             // TXCM
             // 
