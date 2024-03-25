@@ -97,5 +97,15 @@ namespace NEW_Programming
             TXM.Text = string.Format("{0:0.##########}", douYard * 91.44*0.01);
             TXKM.Text = string.Format("{0:0.##########}", douYard * 91.44 * 0.01*0.001);
         }
+
+        private void changebutton_MouseClick(object sender, MouseEventArgs e)
+        {
+            TXinch.Text = "";
+            TXFT.Text = "";
+            TXyard.Text = "";
+            TXCM.Text = "";
+            TXM.Text = "";
+            TXKM.Text = "";
+        }
     }
 }

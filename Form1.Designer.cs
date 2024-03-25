@@ -180,6 +180,7 @@ namespace NEW_Programming
             this.changebutton.TabIndex = 13;
             this.changebutton.Text = "清除數據";
             this.changebutton.UseVisualStyleBackColor = true;
+            this.changebutton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.changebutton_MouseClick);
             // 
             // Form1
             // 
