@@ -40,9 +40,9 @@ namespace NEW_Programming
             this.TXCM = new System.Windows.Forms.TextBox();
             this.TXM = new System.Windows.Forms.TextBox();
             this.TXKM = new System.Windows.Forms.TextBox();
-            this.TXECM = new System.Windows.Forms.TextBox();
-            this.TXEM = new System.Windows.Forms.TextBox();
-            this.TXEKM = new System.Windows.Forms.TextBox();
+            this.TXinch = new System.Windows.Forms.TextBox();
+            this.TXFT = new System.Windows.Forms.TextBox();
+            this.TXyard = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.changebutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -134,29 +134,32 @@ namespace NEW_Programming
             this.TXKM.TabIndex = 8;
             this.TXKM.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TXKM_KeyUp);
             // 
-            // TXECM
+            // TXinch
             // 
-            this.TXECM.Font = new System.Drawing.Font("新細明體", 18F);
-            this.TXECM.Location = new System.Drawing.Point(62, 244);
-            this.TXECM.Name = "TXECM";
-            this.TXECM.Size = new System.Drawing.Size(100, 36);
-            this.TXECM.TabIndex = 9;
+            this.TXinch.Font = new System.Drawing.Font("新細明體", 18F);
+            this.TXinch.Location = new System.Drawing.Point(62, 244);
+            this.TXinch.Name = "TXinch";
+            this.TXinch.Size = new System.Drawing.Size(100, 36);
+            this.TXinch.TabIndex = 9;
+            this.TXinch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TXinch_KeyUp);
             // 
-            // TXEM
+            // TXFT
             // 
-            this.TXEM.Font = new System.Drawing.Font("新細明體", 18F);
-            this.TXEM.Location = new System.Drawing.Point(332, 244);
-            this.TXEM.Name = "TXEM";
-            this.TXEM.Size = new System.Drawing.Size(100, 36);
-            this.TXEM.TabIndex = 10;
+            this.TXFT.Font = new System.Drawing.Font("新細明體", 18F);
+            this.TXFT.Location = new System.Drawing.Point(332, 244);
+            this.TXFT.Name = "TXFT";
+            this.TXFT.Size = new System.Drawing.Size(100, 36);
+            this.TXFT.TabIndex = 10;
+            this.TXFT.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TXFT_KeyUp);
             // 
-            // TXEKM
+            // TXyard
             // 
-            this.TXEKM.Font = new System.Drawing.Font("新細明體", 18F);
-            this.TXEKM.Location = new System.Drawing.Point(603, 244);
-            this.TXEKM.Name = "TXEKM";
-            this.TXEKM.Size = new System.Drawing.Size(100, 36);
-            this.TXEKM.TabIndex = 11;
+            this.TXyard.Font = new System.Drawing.Font("新細明體", 18F);
+            this.TXyard.Location = new System.Drawing.Point(603, 244);
+            this.TXyard.Name = "TXyard";
+            this.TXyard.Size = new System.Drawing.Size(100, 36);
+            this.TXyard.TabIndex = 11;
+            this.TXyard.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TXyard_KeyUp);
             // 
             // label7
             // 
@@ -185,9 +188,9 @@ namespace NEW_Programming
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.changebutton);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.TXEKM);
-            this.Controls.Add(this.TXEM);
-            this.Controls.Add(this.TXECM);
+            this.Controls.Add(this.TXyard);
+            this.Controls.Add(this.TXFT);
+            this.Controls.Add(this.TXinch);
             this.Controls.Add(this.TXKM);
             this.Controls.Add(this.TXM);
             this.Controls.Add(this.TXCM);
@@ -216,9 +219,9 @@ namespace NEW_Programming
         private System.Windows.Forms.TextBox TXCM;
         private System.Windows.Forms.TextBox TXM;
         private System.Windows.Forms.TextBox TXKM;
-        private System.Windows.Forms.TextBox TXECM;
-        private System.Windows.Forms.TextBox TXEM;
-        private System.Windows.Forms.TextBox TXEKM;
+        private System.Windows.Forms.TextBox TXinch;
+        private System.Windows.Forms.TextBox TXFT;
+        private System.Windows.Forms.TextBox TXyard;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button changebutton;
     }

@@ -24,6 +24,9 @@ namespace NEW_Programming
 
             TXM.Text = string.Format("{0:0.##########}", douCM / 100);
             TXKM.Text = string.Format("{0:0.##########}", douCM / 100000);
+            TXinch.Text = string.Format("{0:0.##########}", douCM / 2.54);
+            TXFT.Text = string.Format("{0:0.##########}", douCM / 30.48);
+            TXyard.Text = string.Format("{0:0.##########}", douCM / 91.44);
         }
 
         private void TXM_KeyUp(object sender, KeyEventArgs e)
@@ -44,6 +47,38 @@ namespace NEW_Programming
 
             TXM.Text = string.Format("{0:0.##########}", douKM*1000);
             TXCM.Text = string.Format("{0:0.##########}", douKM*100000);
+        }
+
+        private void TXinch_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douIN; //宣告一個double變數，變數名稱叫douCM
+
+            douIN = Convert.ToDouble(TXinch.Text); //從txtCM輸入文字框取得輸入的文字，並且轉換成double的資料型態
+
+            TXFT.Text = string.Format("{0:0.##########}", douIN/12);
+            TXyard.Text = string.Format("{0:0.##########}", douIN/36);
+
+        }
+
+        private void TXFT_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douFT; //宣告一個double變數，變數名稱叫douCM
+
+            douFT = Convert.ToDouble(TXFT.Text); //從txtCM輸入文字框取得輸入的文字，並且轉換成double的資料型態
+
+            TXinch.Text = string.Format("{0:0.##########}", douFT * 12);
+            TXyard.Text = string.Format("{0:0.##########}", douFT/3);
+
+        }
+
+        private void TXyard_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douYard; //宣告一個double變數，變數名稱叫douCM
+
+            douYard = Convert.ToDouble(TXyard.Text); //從txtCM輸入文字框取得輸入的文字，並且轉換成double的資料型態
+
+            TXinch.Text = string.Format("{0:0.##########}", douYard * 36);
+            TXFT.Text = string.Format("{0:0.##########}", douYard * 3);
         }
     }
 }
