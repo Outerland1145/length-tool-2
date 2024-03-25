@@ -45,6 +45,7 @@ namespace NEW_Programming
             this.TXyard = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.changebutton = new System.Windows.Forms.Button();
+            this.Information = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -174,7 +175,7 @@ namespace NEW_Programming
             // changebutton
             // 
             this.changebutton.Font = new System.Drawing.Font("新細明體", 15F);
-            this.changebutton.Location = new System.Drawing.Point(332, 312);
+            this.changebutton.Location = new System.Drawing.Point(603, 307);
             this.changebutton.Name = "changebutton";
             this.changebutton.Size = new System.Drawing.Size(100, 46);
             this.changebutton.TabIndex = 13;
@@ -182,11 +183,22 @@ namespace NEW_Programming
             this.changebutton.UseVisualStyleBackColor = true;
             this.changebutton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.changebutton_MouseClick);
             // 
+            // Information
+            // 
+            this.Information.AutoSize = true;
+            this.Information.Font = new System.Drawing.Font("新細明體", 36F);
+            this.Information.Location = new System.Drawing.Point(54, 307);
+            this.Information.Name = "Information";
+            this.Information.Size = new System.Drawing.Size(260, 48);
+            this.Information.TabIndex = 14;
+            this.Information.Text = "請輸入數字";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Information);
             this.Controls.Add(this.changebutton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TXyard);
@@ -225,6 +237,7 @@ namespace NEW_Programming
         private System.Windows.Forms.TextBox TXyard;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button changebutton;
+        private System.Windows.Forms.Label Information;
     }
 }
 
