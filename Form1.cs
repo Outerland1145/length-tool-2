@@ -20,12 +20,16 @@ namespace NEW_Programming
             InitializeComponent();
             Information.Text = "請輸入數字";
         }
-        private void TXCM_KeyUp(object sender, KeyEventArgs e)
+        private void caculateAnswer(int Caculatekind, double douOutput)
         {
-            strInput = TXCM.Text; // 將txtCM文字框的值放入strInput變數
-
-            // 判斷式，如果能夠以double.TryParse成功轉型，那才做數值的計算
-            if (double.TryParse(strInput, out douOutput) == true)
+            //Kind代表你輸入的數字是屬於哪一個單位，運作原理為將輸入單位轉換為公分後再進行運算
+            //1是公分
+            //2是公尺
+            //3是公里
+            //4是英寸
+            //5是英尺
+            //6是碼
+            if (Caculatekind == 1)
             {
                 TXM.Text = string.Format("{0:0.##########}", douOutput / 100);
                 TXKM.Text = string.Format("{0:0.##########}", douOutput / 100000);
@@ -33,6 +37,62 @@ namespace NEW_Programming
                 TXFT.Text = string.Format("{0:0.##########}", douOutput / 30.48);
                 TXyard.Text = string.Format("{0:0.##########}", douOutput / 91.44);
                 Information.Text = "";
+            }
+            if (Caculatekind == 2)
+            {
+                TXKM.Text = string.Format("{0:0.##########}", douOutput / 1000);
+                TXCM.Text = string.Format("{0:0.##########}", douOutput * 100);
+                TXinch.Text = string.Format("{0:0.##########}", douOutput * 100 / 2.54);
+                TXFT.Text = string.Format("{0:0.##########}", douOutput * 100 / 30.48);
+                TXyard.Text = string.Format("{0:0.##########}", douOutput * 100 / 91.44);
+                Information.Text = "";
+            }
+            if (Caculatekind == 3)
+            {
+                TXM.Text = string.Format("{0:0.##########}", douOutput * 1000);
+                TXCM.Text = string.Format("{0:0.##########}", douOutput * 100000);
+                TXinch.Text = string.Format("{0:0.##########}", douOutput * 100000 / 2.54);
+                TXFT.Text = string.Format("{0:0.##########}", douOutput * 100000 / 30.48);
+                TXyard.Text = string.Format("{0:0.##########}", douOutput * 100000 / 91.44);
+                Information.Text = "";
+            }
+            if (Caculatekind == 4)
+            {
+                TXFT.Text = string.Format("{0:0.##########}", douOutput / 12);
+                TXyard.Text = string.Format("{0:0.##########}", douOutput / 36);
+                TXCM.Text = string.Format("{0:0.##########}", douOutput * 2.54);
+                TXM.Text = string.Format("{0:0.##########}", douOutput * 2.54 * 0.01);
+                TXKM.Text = string.Format("{0:0.##########}", douOutput * 2.54 * 0.01 * 0.001);
+                Information.Text = "";
+            }
+            if (Caculatekind == 5)
+            {
+                TXinch.Text = string.Format("{0:0.##########}", douOutput * 12);
+                TXyard.Text = string.Format("{0:0.##########}", douOutput / 3);
+                TXCM.Text = string.Format("{0:0.##########}", douOutput * 30.48);
+                TXM.Text = string.Format("{0:0.##########}", douOutput * 30.48 * 0.01);
+                TXKM.Text = string.Format("{0:0.##########}", douOutput * 30.48 * 0.01 * 0.001);
+                Information.Text = "";
+            }
+            if (Caculatekind == 6)
+            {
+                TXinch.Text = string.Format("{0:0.##########}", douOutput * 36);
+                TXFT.Text = string.Format("{0:0.##########}", douOutput * 3);
+                TXCM.Text = string.Format("{0:0.##########}", douOutput * 91.44);
+                TXM.Text = string.Format("{0:0.##########}", douOutput * 91.44 * 0.01);
+                TXKM.Text = string.Format("{0:0.##########}", douOutput * 91.44 * 0.01 * 0.001);
+                Information.Text = "";
+            }
+            
+        }
+        private void TXCM_KeyUp(object sender, KeyEventArgs e)
+        {
+            strInput = TXCM.Text; // 將txtCM文字框的值放入strInput變數
+
+            // 判斷式，如果能夠以double.TryParse成功轉型，那才做數值的計算
+            if (double.TryParse(strInput, out douOutput) == true)
+            {
+                caculateAnswer(1, douOutput);
             }
             else
             {
@@ -48,12 +108,7 @@ namespace NEW_Programming
             strInput = TXM.Text;
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                TXKM.Text = string.Format("{0:0.##########}", douOutput / 1000);
-                TXCM.Text = string.Format("{0:0.##########}", douOutput * 100);
-                TXinch.Text = string.Format("{0:0.##########}", douOutput * 100 / 2.54);
-                TXFT.Text = string.Format("{0:0.##########}", douOutput * 100 / 30.48);
-                TXyard.Text = string.Format("{0:0.##########}", douOutput * 100 / 91.44);
-                Information.Text = "";
+                caculateAnswer(2, douOutput);
             }
             else
             {
@@ -70,12 +125,7 @@ namespace NEW_Programming
 
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                TXM.Text = string.Format("{0:0.##########}", douOutput * 1000);
-                TXCM.Text = string.Format("{0:0.##########}", douOutput * 100000);
-                TXinch.Text = string.Format("{0:0.##########}", douOutput * 100000 / 2.54);
-                TXFT.Text = string.Format("{0:0.##########}", douOutput * 100000 / 30.48);
-                TXyard.Text = string.Format("{0:0.##########}", douOutput * 100000 / 91.44);
-                Information.Text = "";
+                caculateAnswer(3, douOutput);
             }
             else
             {
@@ -91,12 +141,7 @@ namespace NEW_Programming
 
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                TXFT.Text = string.Format("{0:0.##########}", douOutput / 12);
-                TXyard.Text = string.Format("{0:0.##########}", douOutput / 36);
-                TXCM.Text = string.Format("{0:0.##########}", douOutput * 2.54);
-                TXM.Text = string.Format("{0:0.##########}", douOutput * 2.54 * 0.01);
-                TXKM.Text = string.Format("{0:0.##########}", douOutput * 2.54 * 0.01 * 0.001);
-                Information.Text = "";
+                caculateAnswer(4, douOutput);
             }
             else
             {
@@ -114,12 +159,7 @@ namespace NEW_Programming
 
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                TXinch.Text = string.Format("{0:0.##########}", douOutput * 12);
-                TXyard.Text = string.Format("{0:0.##########}", douOutput / 3);
-                TXCM.Text = string.Format("{0:0.##########}", douOutput * 30.48);
-                TXM.Text = string.Format("{0:0.##########}", douOutput * 30.48 * 0.01);
-                TXKM.Text = string.Format("{0:0.##########}", douOutput * 30.48 * 0.01 * 0.001);
-                Information.Text = "";
+                caculateAnswer(5, douOutput);
             }
             else
             {
@@ -137,12 +177,7 @@ namespace NEW_Programming
 
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                TXinch.Text = string.Format("{0:0.##########}", douOutput * 36);
-                TXFT.Text = string.Format("{0:0.##########}", douOutput * 3);
-                TXCM.Text = string.Format("{0:0.##########}", douOutput * 91.44);
-                TXM.Text = string.Format("{0:0.##########}", douOutput * 91.44 * 0.01);
-                TXKM.Text = string.Format("{0:0.##########}", douOutput * 91.44 * 0.01 * 0.001);
-                Information.Text = "";
+                caculateAnswer(6, douOutput);
             }
             else
             {
